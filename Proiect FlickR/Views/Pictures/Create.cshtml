@@ -7,22 +7,31 @@
                               new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
-    <fieldset>
-        <legend>Image</legend>
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Path)
-        </div>
-        <div class="editor-field">
-            <input id="file" title="Upload a product image" type="file" name="file" />
-        </div>
-        <p><input type="submit" value="Create" /></p>
-    </fieldset>
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+    @Html.HiddenFor(m => m.Id)
+
+    @Html.Label("Name", "Nume poza")
+    <br />
+    @Html.TextBox("Name", null, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+    {
+        <label for="file">Upload Image:</label>
+        <input type="file" name="file" id="file" /><br><br>
+        <input type="submit" value="Upload Image" />
+        <br><br>
+        @ViewBag.Message
+    }
 }
-<div>
-    @Html.ActionLink("Create", "Index")
-</div>
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+
+
+
+
+
+
+
+
+
+
+
 

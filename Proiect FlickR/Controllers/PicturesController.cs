@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using Proiect_FlickR.Models;
 using System.IO;
+using System.Diagnostics;
+
 
 namespace Proiect_FlickR.Controllers
 {
@@ -18,7 +20,17 @@ namespace Proiect_FlickR.Controllers
         // GET: Pictures
         public ActionResult Index()
         {
-            return View(db.Pictures.ToList());
+            var pictures = db.Pictures;
+
+            if (TempData.ContainsKey("message"))
+            {
+                ViewBag.message = TempData["message"].ToString();
+            }
+
+            ViewBag.Pictures = pictures;
+
+            return View();
+            //return View(db.Pictures.ToList());
         }
 
         // GET: Pictures/Details/5
@@ -48,31 +60,28 @@ namespace Proiect_FlickR.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Picture picture, HttpPostedFileBase file)
         {
-             
-            if (file != null)
+
+            if (file != null && picture.Name != null)
             {
-                //file.SaveAs(HttpContext.Server.MapPath("~/Pictures/")+ file.FileName);
-                //picture.Path = file.FileName;
-
-                //var fileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Path.GetExtension(file.FileName)
-                var path = Path.Combine(Server.MapPath("~/Pictures"), file.FileName);
-
-                file.SaveAs(path);
-                picture.Path = file.FileName;
-                picture.Id = 1;
-                picture.Name = "meli";
-                    
+                try
+                {
+                    string path = "Pictures" + "\\" + file.FileName;
+                    //Debug.WriteLine(path);
+                    file.SaveAs(path);
+                    picture.Path = path;
+                    if (picture.Name !=null && picture.Path != null)
+                    {
+                        db.Pictures.Add(picture);
+                        db.SaveChanges();
+                    }
+                    ViewBag.Message = "File uploaded successfully";
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = "ERROR:" + ex.Message.ToString();
+                }
             }
-
-            if (ModelState.IsValid)
-            {
-                db.Pictures.Add(picture);
-                db.SaveChanges();
-            }
-            return RedirectToAction("Index");
-             
-             
-    
+            return RedirectToAction("Index","Pictures");
         }
 
             // GET: Pictures/Edit/5
