@@ -4,6 +4,8 @@
     ViewBag.Title = "Index";
 }
 
+
+
 <h2>Index</h2>
 
 <p>
@@ -21,12 +23,12 @@
         <tr>
             <td>
                 
-                <img src="@Url.Content(picture.Path)" height="42" width="42">
+                <img src="@Url.Content(picture.Path)" height="42" width="42" />
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = picture.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = picture.Id }) 
-             
+                @Html.ActionLink("Details", "Details", new { id = picture.Id })
+
             </td>
         </tr>
     }

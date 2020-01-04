@@ -65,7 +65,8 @@ namespace Proiect_FlickR.Controllers
             {
                 try
                 {
-                    string path = "Pictures" + "\\" + file.FileName;
+                    string path = Path.Combine(Server.MapPath("~/Pictures"), file.FileName);
+                    //string path = "Pictures" + "\\" + file.FileName;
                     //Debug.WriteLine(path);
                     file.SaveAs(path);
                     picture.Path = path;
