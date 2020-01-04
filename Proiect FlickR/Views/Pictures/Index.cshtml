@@ -16,15 +16,16 @@
         </th>
     </tr>
 
-    @foreach (var item in Model)
+    @foreach (Proiect_FlickR.Models.Picture picture in ViewBag.Pictures)
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Path)
+                
+                <img src="@Url.Content(picture.Path)" height="42" width="42">
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) 
+                @Html.ActionLink("Edit", "Edit", new { id = picture.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = picture.Id }) 
              
             </td>
         </tr>
