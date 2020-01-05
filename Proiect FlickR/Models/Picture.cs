@@ -18,6 +18,7 @@ namespace Proiect_FlickR.Models
         [DisplayName("Upload Picture")]
         public String Path { get; set; }
 
+        public Category category { get; set; }
     
     }
 }
