@@ -17,7 +17,9 @@ namespace Proiect_FlickR.Models
         [Required]
         [DisplayName("Upload Picture")]
         public String Path { get; set; }
+        
 
-    
+
+
     }
 }

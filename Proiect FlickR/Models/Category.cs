@@ -12,6 +12,7 @@ namespace Proiect_FlickR.Models
         public int Id { get; set; }
         [Required]
         public String Name { get; set; }
+        
     }
 
     
