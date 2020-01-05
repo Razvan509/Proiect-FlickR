@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Proiect_FlickR.Models.Picture>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Path)
+        </th>
+    </tr>
+
+    @foreach (Proiect_FlickR.Models.Picture picture in ViewBag.Pictures)
+    {
+        <tr>
+            <td>
+                
+                <img src="@Url.Content(picture.Path)" height="42" width="42" />
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = picture.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = picture.Id })
+
+            </td>
+        </tr>
+    }
+
+</table>

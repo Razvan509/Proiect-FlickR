@@ -171,7 +171,7 @@
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\PicturesController.cs" />
+    <Compile Include="Controllers\PictureController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -244,15 +244,14 @@
     <Content Include="Views\Categories\Details.cshtml" />
     <Content Include="Views\Categories\Edit.cshtml" />
     <Content Include="Views\Categories\Index.cshtml" />
-    <Content Include="Views\Pictures\Create.cshtml" />
-    <Content Include="Views\Pictures\Delete.cshtml" />
-    <Content Include="Views\Pictures\Details.cshtml" />
-    <Content Include="Views\Pictures\Edit.cshtml" />
-    <Content Include="Views\Pictures\Index.cshtml" />
+    <Content Include="Views\Picture\Create.cshtml" />
+    <Content Include="Views\Picture\Delete.cshtml" />
+    <Content Include="Views\Picture\Details.cshtml" />
+    <Content Include="Views\Picture\Edit.cshtml" />
+    <Content Include="Views\Picture\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Pictures\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
