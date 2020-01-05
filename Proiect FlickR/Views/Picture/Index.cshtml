@@ -26,6 +26,9 @@
                 <img src="@Url.Content(picture.Path)" height="42" width="42" />
             </td>
             <td>
+               @picture.Name
+            </td>
+            <td>
                 @Html.ActionLink("Edit", "Edit", new { id = picture.Id }) |
                 @Html.ActionLink("Details", "Details", new { id = picture.Id })
 

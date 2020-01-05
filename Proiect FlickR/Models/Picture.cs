@@ -17,14 +17,12 @@ namespace Proiect_FlickR.Models
         [Required]
         [DisplayName("Upload Picture")]
         public String Path { get; set; }
-
+        
         public Category Category { get; set; }
 
         public DateTime Time { get; set; }
 
         public String Description { get; set; }
-
-        
 
     }
 }
