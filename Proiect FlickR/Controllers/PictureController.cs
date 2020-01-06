@@ -73,11 +73,6 @@ namespace Proiect_FlickR.Controllers
             picture.Path = "~/Content/" + fileName;
             fileName = Path.Combine(Server.MapPath("~/Content"), fileName);
             file.SaveAs(fileName);
-<<<<<<< HEAD
-            
-=======
-           // picture.Time = DateTime.Now;
->>>>>>> a8b7b82cfa6e28e63914c58770123ce8d8d5270f
 
             if (picture.Name != null && picture.Path != "Content" + "\\")
             {

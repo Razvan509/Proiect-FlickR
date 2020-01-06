@@ -106,7 +106,8 @@ namespace Proiect_FlickR.Controllers
             // Extragem toate categoriile din baza de date
             var pictures = from pic in db.Pictures
                            where pic.CategoryId == category.Id
-                             select pic;
+                           orderby pic.Time
+                           select pic;
             
             ViewBag.Pictures = pictures.ToList();
 
