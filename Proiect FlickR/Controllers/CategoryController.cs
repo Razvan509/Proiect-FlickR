@@ -78,6 +78,22 @@ namespace Proiect_FlickR.Controllers
             return View(category);
         }
 
+        public ActionResult Details(int id)
+        {
+            Category category = db.Categories.Find(id);
+
+
+            // Extragem toate categoriile din baza de date
+            var pictures = from pic in db.Pictures
+                           where pic.CategoryId == category.Id
+                             select pic;
+            
+            ViewBag.Pictures = pictures.ToList();
+
+
+            return View();
+        }
+
         // GET: Categories/Delete/5
         //[Authorize(Roles = "admin")]
         public ActionResult Delete(int? id)

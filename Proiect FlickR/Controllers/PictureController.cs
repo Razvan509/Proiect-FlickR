@@ -53,6 +53,10 @@ namespace Proiect_FlickR.Controllers
         public ActionResult Create()
         {
             Picture picture = new Picture();
+
+            // preluam lista de categorii din metoda GetAllCategories()
+            picture.Categories = GetAllCategories();
+
             return View(picture);
         }
 
@@ -61,35 +65,15 @@ namespace Proiect_FlickR.Controllers
         public ActionResult Create(Picture picture, HttpPostedFileBase file)
         {
 
-            /*if (file != null && picture.Name != null)
-            {
-                try
-                {
-                    var fileName = Path.GetFileName(file.FileName);
-                    string path = Path.Combine(Server.MapPath("~/Content"), fileName);
-                    //string path = "Pictures" + "\\" + file.FileName;
-                    //Debug.WriteLine(path);
-                    file.SaveAs(path);
-                    picture.Path = "Content" + "\\" + fileName; ;
-                    if (picture.Name !=null && picture.Path != "Content" + "\\")
-                    {
-                        db.Pictures.Add(picture);
-                        db.SaveChanges();
-                    }
-                    ViewBag.Message = "File uploaded successfully";
-                }
-                catch (Exception ex)
-                {
-                    ViewBag.Message = "ERROR:" + ex.Message.ToString();
-                }
-            }*/
-
+            picture.Categories = GetAllCategories();
+            
             string fileName = Path.GetFileNameWithoutExtension(file.FileName);
             string extension = Path.GetExtension(file.FileName);
             fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
             picture.Path = "~/Content/" + fileName;
             fileName = Path.Combine(Server.MapPath("~/Content"), fileName);
             file.SaveAs(fileName);
+            
 
             if (picture.Name != null && picture.Path != "Content" + "\\")
             {
@@ -164,6 +148,31 @@ namespace Proiect_FlickR.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        [NonAction]
+        public IEnumerable<SelectListItem> GetAllCategories()
+        {
+            // generam o lista goala
+            var selectList = new List<SelectListItem>();
+
+            // Extragem toate categoriile din baza de date
+            var categories = from cat in db.Categories
+                             select cat;
+
+            // iteram prin categorii
+            foreach (var category in categories)
+            {
+                // Adaugam in lista elementele necesare pentru dropdown
+                selectList.Add(new SelectListItem
+                {
+                    Value = category.Id.ToString(),
+                    Text = category.Name.ToString()
+                });
+            }
+
+            // returnam lista de categorii
+            return selectList;
         }
     }
 }

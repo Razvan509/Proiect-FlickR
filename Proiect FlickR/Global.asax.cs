@@ -19,7 +19,7 @@ namespace Proiect_FlickR
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            //Database.SetInitializer<Models.ApplicationDbContext>(null);
+            Database.SetInitializer<Models.ApplicationDbContext>(null);
         }
     }
 }

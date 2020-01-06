@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Proiect_FlickR.Models
@@ -18,7 +19,14 @@ namespace Proiect_FlickR.Models
         [DisplayName("Upload Picture")]
         public String Path { get; set; }
 
-        public Category Category { get; set; }
+        //[Required(ErrorMessage = "Categoria este obligatorie")]
+        public int CategoryId { get; set; }
+
+        // public virtual Category Category { get; set; }
+        public virtual Category Category { get; set; }
+
+        public IEnumerable<SelectListItem> Categories { get; set; }
+
 
         public DateTime Time { get; set; }
 
