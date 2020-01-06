@@ -1,7 +1,7 @@
 ﻿@model Proiect_FlickR.Models.Picture
 
 @{
-    Layout = null;
+    
 }
 
 <!DOCTYPE html>
@@ -13,30 +13,40 @@
 </head>
 <body>
     <div>
-        <h4>Picture</h4>
+        <h4>@Html.DisplayFor(model => model.Name)</h4>
         <hr />
         <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Name)
-            </dt>
-    
+        
+         
+
             <dd>
-                @Html.DisplayFor(model => model.Name)
+                @Html.DisplayFor(model => model.Description)
             </dd>
-    
             <dt>
                 @Html.DisplayNameFor(model => model.Path)
             </dt>
-    
+
             <dd>
-                @Html.DisplayFor(model => model.Path)
+                <a target="_blank" href="@Url.Content(Model.Path)">
+                    <img class="img-responsive" src="@Url.Content(Model.Path)"  />
+                </a>
             </dd>
-    
+
         </dl>
     </div>
     <p>
         @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
         @Html.ActionLink("Back to List", "Index")
+    </p>
+    <p>
+        @using (Html.BeginForm(actionName: "Delete", controllerName: "Picture", method: FormMethod.Post, routeValues: new { id = @Model.Id }))
+        {
+
+        @Html.HttpMethodOverride(HttpVerbs.Delete)
+        <br />
+        <button class="btn btn-success" type="submit">Sterge articol</button>
+
+        }
     </p>
 </body>
 </html>

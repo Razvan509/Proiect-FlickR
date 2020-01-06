@@ -53,6 +53,9 @@ namespace Proiect_FlickR.Controllers
         public ActionResult Create()
         {
             Picture picture = new Picture();
+
+            // preluam lista de categorii din metoda GetAllCategories()
+            picture.Categories = GetAllCategories();
             return View(picture);
         }
 
@@ -60,34 +63,12 @@ namespace Proiect_FlickR.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Picture picture, HttpPostedFileBase file)
         {
-
-            /*if (file != null && picture.Name != null)
-            {
-                try
-                {
-                    var fileName = Path.GetFileName(file.FileName);
-                    string path = Path.Combine(Server.MapPath("~/Content"), fileName);
-                    //string path = "Pictures" + "\\" + file.FileName;
-                    //Debug.WriteLine(path);
-                    file.SaveAs(path);
-                    picture.Path = "Content" + "\\" + fileName; ;
-                    if (picture.Name !=null && picture.Path != "Content" + "\\")
-                    {
-                        db.Pictures.Add(picture);
-                        db.SaveChanges();
-                    }
-                    ViewBag.Message = "File uploaded successfully";
-                }
-                catch (Exception ex)
-                {
-                    ViewBag.Message = "ERROR:" + ex.Message.ToString();
-                }
-            }*/
-
+            picture.Categories = GetAllCategories();
             string fileName = Path.GetFileNameWithoutExtension(file.FileName);
             string extension = Path.GetExtension(file.FileName);
             fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
             picture.Path = "~/Content/" + fileName;
+            
             fileName = Path.Combine(Server.MapPath("~/Content"), fileName);
             file.SaveAs(fileName);
            // picture.Time = DateTime.Now;
@@ -140,8 +121,8 @@ namespace Proiect_FlickR.Controllers
                         {
                             picture.Name = requestPicture.Name;
                   
-                            //picture.Date = requestPicture.Date;
-                           // picture.CategoryId = requestPicture.CategoryId;
+                            picture.Time = requestPicture.Time;
+                            //picture.CategoryId = requestPicture.CategoryId;
                             db.SaveChanges();
                             TempData["message"] = "Articolul a fost modificat!";
                         }
@@ -169,39 +150,86 @@ namespace Proiect_FlickR.Controllers
             }
         }
 
-        // GET: Pictures/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Picture picture = db.Pictures.Find(id);
-            if (picture == null)
-            {
-                return HttpNotFound();
-            }
-            return View(picture);
-        }
+        /* // GET: Pictures/Delete/5
+         public ActionResult Delete(int? id)
+         {
+             if (id == null)
+             {
+                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+             }
+             Picture picture = db.Pictures.Find(id);
+             if (picture == null)
+             {
+                 return HttpNotFound();
+             }
+             return View(picture);
+         }
 
-        // POST: Pictures/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+         // POST: Pictures/Delete/5
+         [HttpPost, ActionName("Delete")]
+         [ValidateAntiForgeryToken]
+         public ActionResult DeleteConfirmed(int id)
+         {
+
+             Picture picture = db.Pictures.Find(id);
+             db.Pictures.Remove(picture);
+             db.SaveChanges();
+             return RedirectToAction("Index");
+         }
+
+         protected override void Dispose(bool disposing)
+         {
+             if (disposing)
+             {
+                 db.Dispose();
+             }
+             base.Dispose(disposing);
+         }
+         */
+
+
+        [HttpDelete]
+        //[Authorize(Roles = "Editor,Administrator")]
+        public ActionResult Delete(int id)
         {
             Picture picture = db.Pictures.Find(id);
-            db.Pictures.Remove(picture);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
+           /* if (picture.UserId == User.Identity.GetUserId() ||
+                User.IsInRole("Administrator"))
+            {*/
+                db.Pictures.Remove(picture);
+                db.SaveChanges();
+                TempData["message"] = "Articolul a fost sters!";
+                return RedirectToAction("Index");
+            /*}
+            else
             {
-                db.Dispose();
+                TempData["message"] = "Nu aveti dreptul sa stergeti un articol care nu va apartine!";
+                return RedirectToAction("Index");
+            }*/
+
+        }
+        public IEnumerable<SelectListItem> GetAllCategories()
+        {
+            // generam o lista goala
+            var selectList = new List<SelectListItem>();
+
+            // Extragem toate categoriile din baza de date
+            var categories = from cat in db.Categories
+                             select cat;
+
+            // iteram prin categorii
+            foreach (var category in categories)
+            {
+                // Adaugam in lista elementele necesare pentru dropdown
+                selectList.Add(new SelectListItem
+                {
+                    Value = category.Id.ToString(),
+                    Text = category.Name.ToString()
+                });
             }
-            base.Dispose(disposing);
+
+            // returnam lista de categorii
+            return selectList;
         }
     }
 }

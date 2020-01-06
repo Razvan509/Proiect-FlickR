@@ -1,8 +1,8 @@
 @model Proiect_FlickR.Models.Picture
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Create Article";
 }
-<h2>Create</h2>
+<h2>ViewBag.Title</h2>
 @using (Html.BeginForm("Create", "Picture", FormMethod.Post,
                               new { enctype = "multipart/form-data" }))
 {
@@ -10,7 +10,7 @@
     @Html.ValidationSummary(false, "", new { @class = "text-danger" })
 
     @Html.HiddenFor(m => m.Id)
- 
+
 
     @Html.Label("Name", "Nume poza")
     <br />
@@ -21,11 +21,36 @@
         <label for="file">Upload Image:</label>
         <input type="file" name="file" id="file" />
         <br>
-        <br>
-        <input type="submit" value="Upload Image" />
-        <br>
-        <br>
-        @ViewBag.Message
-
     }
+
+    @Html.Label("Description", "Continut Articol")
+    <br />
+    @Html.TextArea("Description", null, new { @class = "form-control" })
+    @Html.ValidationMessage("Description", "", new { @class = "text-danger" })
+    <br />
+    <br />
+
+    @Html.Hidden("Time", DateTime.Now, new { @class = "form-control" })
+
+    @Html.HiddenFor(m => m.Category)
+    @Html.HiddenFor(m => m.Time)
+
+
+
+    <label>Selectati categoria</label>
+    @Html.DropDownListFor(m => m.CategoryId, new SelectList(Model.Categories, "Value", "Text"),
+        "Selectati categoria", new { @class = "form-control" })
+
+    @Html.ValidationMessageFor(m => m.CategoryId, "", new { @class = "text-danger" })
+    <br />
+    <br>
+    <input type="submit" value="Upload Image" />
+    <br>
+    <br>
+    @ViewBag.Message
+
+
+
+
+    <br />
 }

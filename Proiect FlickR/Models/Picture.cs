@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Web.Mvc;
 
 namespace Proiect_FlickR.Models
 {
@@ -17,8 +18,9 @@ namespace Proiect_FlickR.Models
         [Required]
         [DisplayName("Upload Picture")]
         public String Path { get; set; }
-        
-        public Category Category { get; set; }
+        public int CategoryId { get; set; }
+        public virtual Category Category{ get; set; }
+        public IEnumerable<SelectListItem> Categories { get; set; }
 
         public DateTime Time { get; set; }
 

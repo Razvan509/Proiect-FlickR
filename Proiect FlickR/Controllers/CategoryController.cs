@@ -10,6 +10,7 @@ using Proiect_FlickR.Models;
 
 namespace Proiect_FlickR.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class CategoryController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
