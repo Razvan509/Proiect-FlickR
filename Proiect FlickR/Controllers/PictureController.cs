@@ -66,13 +66,15 @@ namespace Proiect_FlickR.Controllers
         {
 
             picture.Categories = GetAllCategories();
-            
+
             string fileName = Path.GetFileNameWithoutExtension(file.FileName);
             string extension = Path.GetExtension(file.FileName);
             fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
             picture.Path = "~/Content/" + fileName;
+            
             fileName = Path.Combine(Server.MapPath("~/Content"), fileName);
             file.SaveAs(fileName);
+           // picture.Time = DateTime.Now;
 
             if (picture.Name != null && picture.Path != "Content" + "\\")
             {
@@ -151,41 +153,66 @@ namespace Proiect_FlickR.Controllers
             }
         }
 
-        // GET: Pictures/Delete/5
-        public ActionResult Delete(int? id)
+
+        /* // GET: Pictures/Delete/5
+         public ActionResult Delete(int? id)
+         {
+             if (id == null)
+             {
+                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+             }
+             Picture picture = db.Pictures.Find(id);
+             if (picture == null)
+             {
+                 return HttpNotFound();
+             }
+             return View(picture);
+         }
+
+         // POST: Pictures/Delete/5
+         [HttpPost, ActionName("Delete")]
+         [ValidateAntiForgeryToken]
+         public ActionResult DeleteConfirmed(int id)
+         {
+
+             Picture picture = db.Pictures.Find(id);
+             db.Pictures.Remove(picture);
+             db.SaveChanges();
+             return RedirectToAction("Index");
+         }
+
+         protected override void Dispose(bool disposing)
+         {
+             if (disposing)
+             {
+                 db.Dispose();
+             }
+             base.Dispose(disposing);
+         }
+         */
+
+
+        [HttpDelete]
+        //[Authorize(Roles = "Editor,Administrator")]
+        public ActionResult Delete(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
             Picture picture = db.Pictures.Find(id);
-            if (picture == null)
+           /* if (picture.UserId == User.Identity.GetUserId() ||
+                User.IsInRole("Administrator"))
+            {*/
+                db.Pictures.Remove(picture);
+                db.SaveChanges();
+                TempData["message"] = "Articolul a fost sters!";
+                return RedirectToAction("Index");
+            /*}
+            else
             {
-                return HttpNotFound();
-            }
-            return View(picture);
-        }
+                TempData["message"] = "Nu aveti dreptul sa stergeti un articol care nu va apartine!";
+                return RedirectToAction("Index");
+            }*/
 
-        // POST: Pictures/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Picture picture = db.Pictures.Find(id);
-            db.Pictures.Remove(picture);
-            db.SaveChanges();
-            return RedirectToAction("Index");
         }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
+        
         [NonAction]
         public IEnumerable<SelectListItem> GetAllCategories()
         {

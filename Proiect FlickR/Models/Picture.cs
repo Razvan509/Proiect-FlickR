@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Web.Mvc;
 
 namespace Proiect_FlickR.Models
 {
@@ -26,7 +27,6 @@ namespace Proiect_FlickR.Models
         public virtual Category Category { get; set; }
 
         public IEnumerable<SelectListItem> Categories { get; set; }
-
 
         public DateTime Time { get; set; }
 
