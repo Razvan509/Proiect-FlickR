@@ -36,7 +36,27 @@ namespace Proiect_FlickR.Controllers
         //[Authorize (Roles ="admin")]
         public ActionResult Create([Bind(Include = "Id,Name")] Category category)
         {
-            if (ModelState.IsValid)
+
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    db.Categories.Add(category);
+                    db.SaveChanges();
+                    TempData["message"] = "Categoria a fost adaugata!";
+                    return RedirectToAction("Index","Category");
+                }
+                else
+                {
+                    return View(category);
+                }
+            }
+            catch (Exception e)
+            {
+                return View(category);
+            }
+        }
+        /*if (ModelState.IsValid)
             {
                 db.Categories.Add(category);
                 db.SaveChanges();
@@ -44,7 +64,7 @@ namespace Proiect_FlickR.Controllers
             }
 
             return View(category);
-        }
+        }*/
 
         // GET: Categories/Edit/5
         //[Authorize(Roles = "admin")]

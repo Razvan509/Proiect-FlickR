@@ -207,3 +207,108 @@ D:\laboratoare\DAW\Proiect FlickR\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiec
 D:\laboratoare\DAW\Proiect FlickR\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.csproj.CopyComplete
 D:\laboratoare\DAW\Proiect FlickR\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.dll
 D:\laboratoare\DAW\Proiect FlickR\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.pdb
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Proiect FlickR.dll.config
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Proiect FlickR.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Proiect FlickR.pdb
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\csc.exe
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\csc.exe.config
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\csc.rsp
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\csi.exe
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\csi.exe.config
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\csi.rsp
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.Managed.Core.targets
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.AppContext.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Collections.Immutable.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Console.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.IO.Compression.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.IO.FileSystem.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.IO.Pipes.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Reflection.Metadata.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Security.AccessControl.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Security.Claims.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Security.Principal.Windows.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.ValueTuple.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Xml.XmlDocument.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Xml.XPath.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\vbc.exe
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\vbc.exe.config
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\vbc.rsp
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\VBCSCompiler.exe
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\roslyn\VBCSCompiler.exe.config
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Antlr3.Runtime.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\EntityFramework.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\EntityFramework.SqlServer.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.AspNet.Identity.Core.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Cookies.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Facebook.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Google.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.OAuth.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Twitter.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Web.Infrastructure.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Newtonsoft.Json.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Owin.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\System.Web.Helpers.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\System.Web.Mvc.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\System.Web.Optimization.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\System.Web.Razor.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\System.Web.WebPages.Deployment.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\System.Web.WebPages.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\System.Web.WebPages.Razor.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\WebGrease.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\System.Web.Helpers.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\System.Web.Mvc.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\System.Web.Optimization.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\System.Web.Razor.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\System.Web.WebPages.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\System.Web.WebPages.Deployment.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\System.Web.WebPages.Razor.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Newtonsoft.Json.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Antlr3.Runtime.pdb
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\EntityFramework.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\EntityFramework.SqlServer.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.AspNet.Identity.Core.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Facebook.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Cookies.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Google.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Twitter.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.OAuth.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.csprojAssemblyReference.cache
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.csproj.CoreCompileInputs.cache
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.csproj.CopyComplete
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.dll
+C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.pdb

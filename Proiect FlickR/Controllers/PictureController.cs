@@ -73,7 +73,11 @@ namespace Proiect_FlickR.Controllers
             picture.Path = "~/Content/" + fileName;
             fileName = Path.Combine(Server.MapPath("~/Content"), fileName);
             file.SaveAs(fileName);
+<<<<<<< HEAD
             
+=======
+           // picture.Time = DateTime.Now;
+>>>>>>> a8b7b82cfa6e28e63914c58770123ce8d8d5270f
 
             if (picture.Name != null && picture.Path != "Content" + "\\")
             {
@@ -87,6 +91,8 @@ namespace Proiect_FlickR.Controllers
             // GET: Pictures/Edit/5
             public ActionResult Edit(int? id)
         {
+            Picture pictures = db.Pictures.Find(id);
+            ViewBag.Picture = pictures;
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -104,15 +110,50 @@ namespace Proiect_FlickR.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Path")] Picture picture)
+        //[Bind(Include = "Id,Name,Path")]
+        public ActionResult Edit( int id,Picture requestPicture)
         {
-            if (ModelState.IsValid)
+            //picture.Categories = GetAllCategories();
+
+            try
             {
-                db.Entry(picture).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    Picture picture = db.Pictures.Find(id);
+                   // if (pictures.UserId == User.Identity.GetUserId() ||
+                     //   User.IsInRole("Administrator"))
+                    //{
+                        if (TryUpdateModel(picture))
+                        {
+                            picture.Name = requestPicture.Name;
+                  
+                            //picture.Date = requestPicture.Date;
+                           // picture.CategoryId = requestPicture.CategoryId;
+                            db.SaveChanges();
+                            TempData["message"] = "Articolul a fost modificat!";
+                        }
+                    ModelState.Clear();
+                    return RedirectToAction("Index", "Picture");
+                  
+                  //  }
+                    //else
+                    //{
+                      //  TempData["message"] = "Nu aveti dreptul sa faceti modificari asupra unui articol care nu va apartine!";
+                        //return RedirectToAction("Index");
+                    //}
+
+                }
+                else
+                {
+                    return View(requestPicture);
+                }
+
             }
-            return View(picture);
+            catch (Exception e)
+            {
+                // return View(requestPicture);
+               return  RedirectToAction("Index","Picture");
+            }
         }
 
         // GET: Pictures/Delete/5

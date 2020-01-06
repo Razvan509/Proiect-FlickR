@@ -18,6 +18,7 @@ namespace Proiect_FlickR.Models
         [Required]
         [DisplayName("Upload Picture")]
         public String Path { get; set; }
+<<<<<<< HEAD
 
         //[Required(ErrorMessage = "Categoria este obligatorie")]
         public int CategoryId { get; set; }
@@ -27,12 +28,14 @@ namespace Proiect_FlickR.Models
 
         public IEnumerable<SelectListItem> Categories { get; set; }
 
+=======
+        
+        public Category Category { get; set; }
+>>>>>>> a8b7b82cfa6e28e63914c58770123ce8d8d5270f
 
         public DateTime Time { get; set; }
 
         public String Description { get; set; }
-
-        
 
     }
 }
