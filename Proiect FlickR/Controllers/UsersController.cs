@@ -12,6 +12,7 @@ using Proiect_FlickR.Models;
 
 namespace Proiect_FlickR.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class UsersController : Controller
     {
         private ApplicationDbContext db =  ApplicationDbContext.Create();
@@ -93,7 +94,7 @@ namespace Proiect_FlickR.Controllers
 
                     db.SaveChanges();
                 }
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Users");
             }
             catch (Exception e)
             {

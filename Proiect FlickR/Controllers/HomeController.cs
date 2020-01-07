@@ -8,8 +8,10 @@ using System.Web.Mvc;
 namespace Proiect_FlickR.Controllers
 {
     public class HomeController : Controller
+         
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+
         public ActionResult Index()
         {
             if (Request.IsAuthenticated)
@@ -28,14 +30,14 @@ namespace Proiect_FlickR.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Stock pictures for everyone";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Melinceanu Cristiana Rang Razvan";
 
             return View();
         }
