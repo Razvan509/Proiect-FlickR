@@ -24,7 +24,7 @@ namespace Proiect_FlickR.Controllers
 
 
         // GET: Categories/Create
-        //[Authorize(Roles = "admin")]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Create()
         {
             return View();
@@ -35,7 +35,7 @@ namespace Proiect_FlickR.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //[Authorize (Roles ="admin")]
+        [Authorize (Roles = "Administrator")]
         public ActionResult Create([Bind(Include = "Id,Name")] Category category)
         {
 
@@ -69,7 +69,7 @@ namespace Proiect_FlickR.Controllers
         }*/
 
         // GET: Categories/Edit/5
-        //[Authorize(Roles = "admin")]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -89,6 +89,7 @@ namespace Proiect_FlickR.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Edit([Bind(Include = "Id,Name")] Category category)
         {
             if (ModelState.IsValid)
@@ -125,7 +126,7 @@ namespace Proiect_FlickR.Controllers
         }
 
         // GET: Categories/Delete/5
-        //[Authorize(Roles = "admin")]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -143,6 +144,7 @@ namespace Proiect_FlickR.Controllers
         // POST: Categories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public ActionResult DeleteConfirmed(int id)
         {
             Category category = db.Categories.Find(id);

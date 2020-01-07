@@ -6,9 +6,9 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
-  //  background-color: #c5e6ed;
-    background-image: url(bloom-blossom-botanical-cactus-403575.jpg);
-    background-size:1300px;
+    // background-color: #c5e6ed;
+    background-image: url(bloom-blossom-botanical-cactus-403575.jpg)no-repeat center center fixed;
+    background-size: 1300px;
 }
 
 /* Set padding to keep content from hitting the edges */

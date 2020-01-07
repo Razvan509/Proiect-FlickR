@@ -19,7 +19,7 @@ namespace Proiect_FlickR.Controllers
 
     public class PictureController : Controller
     {
-        
+        public static readonly List<string> ImageExtensions = new List<string> { ".JPG", ".JPE", ".BMP", ".GIF", ".PNG" };
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Pictures
@@ -84,12 +84,14 @@ namespace Proiect_FlickR.Controllers
         [Authorize(Roles = "Editor,Administrator")]
         public ActionResult Create(Picture picture, HttpPostedFileBase file)
         {
-
+            if (!ImageExtensions.Contains(Path.GetExtension(file.FileName).ToUpperInvariant()))
+                return HttpNotFound("Fisierul adaugat nu este o poza!");
             picture.Categories = GetAllCategories();
 
             string fileName = Path.GetFileNameWithoutExtension(file.FileName);
             
             string extension = Path.GetExtension(file.FileName);
+            
             fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
             picture.Path = "~/Content/" + fileName;
             picture.ThumbPath = "~/Upload/thumb/" + fileName;
@@ -113,6 +115,7 @@ namespace Proiect_FlickR.Controllers
         public ActionResult Edit(int? id)
         {
             Picture pictures = db.Pictures.Find(id);
+
             ViewBag.Picture = pictures;
             pictures.Categories = GetAllCategories();
             
@@ -161,7 +164,7 @@ namespace Proiect_FlickR.Controllers
                    }
                     else
                     {
-                       TempData["message"] = "Nu aveti dreptul sa faceti modificari asupra unui articol care nu va apartine!";
+                        TempData["message"] = "Nu aveti dreptul sa faceti modificari asupra unui articol care nu va apartine!";
                         return RedirectToAction("Index");
                     }
 
@@ -219,7 +222,7 @@ namespace Proiect_FlickR.Controllers
 
 
         [HttpDelete]
-        //[Authorize(Roles = "Editor,Administrator")]
+        [Authorize(Roles = "Editor,Administrator")]
         public ActionResult Delete(int id)
         {
             Picture picture = db.Pictures.Find(id);

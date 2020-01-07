@@ -312,3 +312,107 @@ C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.csproj.C
 C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.dll
 C:\facultate\DAW\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.pdb
 D:\laboratoare\DAW\Proiect FlickR\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.csprojAssemblyReference.cache
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Proiect FlickR.dll.config
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Proiect FlickR.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Proiect FlickR.pdb
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\csc.exe
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\csc.exe.config
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\csc.rsp
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\csi.exe
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\csi.exe.config
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\csi.rsp
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.Managed.Core.targets
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.AppContext.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Collections.Immutable.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Console.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.IO.Compression.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.IO.FileSystem.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.IO.Pipes.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Reflection.Metadata.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Security.AccessControl.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Security.Claims.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Security.Principal.Windows.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.ValueTuple.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Xml.XmlDocument.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Xml.XPath.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\vbc.exe
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\vbc.exe.config
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\vbc.rsp
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\VBCSCompiler.exe
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\roslyn\VBCSCompiler.exe.config
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Antlr3.Runtime.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\EntityFramework.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\EntityFramework.SqlServer.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.AspNet.Identity.Core.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Cookies.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Facebook.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Google.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.OAuth.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Twitter.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Web.Infrastructure.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Newtonsoft.Json.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Owin.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\System.Web.Helpers.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\System.Web.Mvc.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\System.Web.Optimization.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\System.Web.Razor.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\System.Web.WebPages.Deployment.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\System.Web.WebPages.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\System.Web.WebPages.Razor.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\WebGrease.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\System.Web.Helpers.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\System.Web.Mvc.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\System.Web.Optimization.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\System.Web.Razor.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\System.Web.WebPages.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\System.Web.WebPages.Deployment.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\System.Web.WebPages.Razor.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Newtonsoft.Json.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Antlr3.Runtime.pdb
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\EntityFramework.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\EntityFramework.SqlServer.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.AspNet.Identity.Core.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Facebook.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Cookies.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Google.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.Twitter.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.Owin.Security.OAuth.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.csprojAssemblyReference.cache
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.csproj.CopyComplete
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.dll
+E:\laboratoare\DezWeb\Proiect-FlickR\Proiect FlickR\obj\Debug\Proiect FlickR.pdb

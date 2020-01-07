@@ -38,6 +38,7 @@ namespace Proiect_FlickR.Controllers
         }
 
         // GET: Album/Create
+        [Authorize(Roles = "Editor,Administrator")]
         public ActionResult Create()
         {
             Album album = new Album();
@@ -50,6 +51,7 @@ namespace Proiect_FlickR.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Editor,Administrator")]
         public ActionResult Create(Album album)
         {
             if (ModelState.IsValid)
@@ -64,6 +66,7 @@ namespace Proiect_FlickR.Controllers
         }
 
         // GET: Album/Edit/5
+        [Authorize(Roles = "Editor,Administrator")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -84,6 +87,7 @@ namespace Proiect_FlickR.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Editor,Administrator")]
         public ActionResult Edit(Album album)
         {
 
@@ -98,6 +102,7 @@ namespace Proiect_FlickR.Controllers
         }
 
         // GET: Album/Delete/5
+        [Authorize(Roles = "Editor,Administrator")]
         public ActionResult Delete(int? id)
         {
             if (id == null)

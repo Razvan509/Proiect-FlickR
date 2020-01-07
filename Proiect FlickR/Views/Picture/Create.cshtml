@@ -1,6 +1,6 @@
 @model Proiect_FlickR.Models.Picture
 @{
-    ViewBag.Title = "Create Article";
+    ViewBag.Title = "Add picture";
 }
 <h2>ViewBag.Title</h2>
 
@@ -28,7 +28,7 @@
         <br>
     }
 
-    @Html.Label("Description", "Continut Articol")
+    @Html.Label("Description", "Descriere Poza")
     <br />
     @Html.TextArea("Description", null, new { @class = "form-control" })
     @Html.ValidationMessage("Description", "", new { @class = "text-danger" })

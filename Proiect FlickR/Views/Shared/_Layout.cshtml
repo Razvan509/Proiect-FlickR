@@ -26,24 +26,22 @@
 
                     @if (User.IsInRole("Administrator"))
                     {
-                        <li>@Html.ActionLink("Afisare poze", "Index", "Picture")</li>
-                        <li>@Html.ActionLink("Afisare categorii", "Index", "Category")</li>
                         <li>@Html.ActionLink("Afisare utilizatori", "Index", "Users")</li>
-                        <li>@Html.ActionLink("Afisare albume", "Index", "Album")</li>
+
                     }
 
                     @if (User.IsInRole("User") || User.IsInRole("Editor"))
                     {
                         <li>@Html.ActionLink("Afisare poze", "Index", "Picture")</li>
-                        <li>@Html.ActionLink("Afisare utilizatori", "Index", "Users")</li>
-                        <li>@Html.ActionLink("Afisare albume", "Index", "Album")</li>
+
 
                     }
 
                     @if (User.IsInRole("Editor") || User.IsInRole("Administrator"))
                     {
-                        <li>@Html.ActionLink("Adaugare Poza", "New", "Picture")</li>
-                        <li>@Html.ActionLink("Afisare utilizatori", "Index", "Users")</li>
+                        <li>@Html.ActionLink("Afisare poze", "Index", "Picture")</li>
+                        <li>@Html.ActionLink("Adaugare Poza", "Create", "Picture")</li>
+                        <li>@Html.ActionLink("Afisare categorii", "Index", "Category")</li>
                         <li>@Html.ActionLink("Afisare albume", "Index", "Album")</li>
                     }
                 </ul>
