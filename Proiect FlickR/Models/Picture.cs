@@ -32,5 +32,7 @@ namespace Proiect_FlickR.Models
 
         public String Description { get; set; }
 
+        public String ThumbPath { get; set; }
+
     }
 }

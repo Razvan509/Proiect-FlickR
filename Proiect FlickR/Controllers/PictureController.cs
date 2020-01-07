@@ -10,6 +10,7 @@ using Proiect_FlickR.Models;
 using System.IO;
 using System.Diagnostics;
 using System.Data.Entity.Infrastructure;
+using Proiect_FlickR.ImageHandler;
 
 namespace Proiect_FlickR.Controllers
 {
@@ -18,16 +19,25 @@ namespace Proiect_FlickR.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Pictures
-        public ActionResult Index()
+        public ActionResult Index(string search, int? category)
         {
             var pictures = db.Pictures;
+            var categories = GetAllCategories();
 
             if (TempData.ContainsKey("message"))
             {
                 ViewBag.message = TempData["message"].ToString();
             }
 
-            ViewBag.Pictures = pictures;
+            if (category != null)
+            {
+                var picturess = pictures.Where(x => x.CategoryId == category);
+                ViewBag.Pictures = picturess.Where(x => x.Name.Contains(search) || search == null).ToList();
+                ViewBag.Categories = categories;
+                return View();
+            }
+            ViewBag.Pictures = pictures.Where(x => x.Name.Contains(search) || search == null).ToList();
+            ViewBag.Categories = categories;
 
             return View();
             //return View(db.Pictures.ToList());
@@ -68,10 +78,13 @@ namespace Proiect_FlickR.Controllers
             picture.Categories = GetAllCategories();
 
             string fileName = Path.GetFileNameWithoutExtension(file.FileName);
+            
             string extension = Path.GetExtension(file.FileName);
             fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
             picture.Path = "~/Content/" + fileName;
-            
+            picture.ThumbPath = "~/Upload/thumb/" + fileName;
+            UploadImage.Crop(96, 72, file.InputStream, Path.Combine(Server.MapPath("~/Upload/thumb/") + fileName));
+
             fileName = Path.Combine(Server.MapPath("~/Content"), fileName);
             file.SaveAs(fileName);
            // picture.Time = DateTime.Now;

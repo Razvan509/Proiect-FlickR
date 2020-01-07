@@ -6,11 +6,12 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 using Proiect_FlickR.Models;
 
 namespace Proiect_FlickR.Controllers
 {
-    [Authorize(Roles = "Administrator")]
+    //[Authorize(Roles = "Administrator")]
     public class CategoryController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -109,11 +110,18 @@ namespace Proiect_FlickR.Controllers
                            where pic.CategoryId == category.Id
                            orderby pic.Time
                            select pic;
-            
-            ViewBag.Pictures = pictures.ToList();
+            if (pictures.ToList().Count > 0)
+            {
+                ViewBag.Pictures = pictures.ToList();
 
 
-            return View();
+                return View();
+            }
+            TempData["msg"] = "<script>alert('Nu exista poze in aceasta categorie!');</script>";
+           
+            return RedirectToAction("Index");
+            //return HttpNotFound("Nu exista poze in aceasta categorie!");
+
         }
 
         // GET: Categories/Delete/5

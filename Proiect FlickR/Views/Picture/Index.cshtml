@@ -1,10 +1,19 @@
-﻿@model IEnumerable<Proiect_FlickR.Models.Picture>
+﻿
 
 @{
     ViewBag.Title = "Index";
 }
 
-
+<br />
+@using (Html.BeginForm("Index", "Picture", FormMethod.Get))
+{
+    @Html.TextBox("search")
+    <label>Selectati categoria</label>
+    @Html.DropDownList("category", new SelectList(ViewBag.Categories, "Value", "Text"),
+        "Selectati categoria", new { @class = "form-control" })
+    <button class="btn btn-sm btn-success" type="submit">Search</button>
+}
+<br />
 
 <h2>Index</h2>
 
@@ -12,21 +21,17 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <table>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Path)
-        </th>
-    </tr>
+    
 
     @foreach (Proiect_FlickR.Models.Picture picture in ViewBag.Pictures)
     {
         <tr>
             <td>
-                
-                <img src="@Url.Content(picture.Path)" height="42" width="42" />
+
+                <img src="@Url.Content(picture.ThumbPath)" />
             </td>
             <td>
-               @picture.Name
+                @picture.Name
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = picture.Id }) |
