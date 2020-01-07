@@ -37,7 +37,6 @@ namespace Proiect_FlickR.Models
         public virtual ApplicationUser User { get; set; }
         public int AlbumId { get; set; }
 
-        public int AlbumId { get; set; }
         public IEnumerable<SelectListItem> Albums { get; set; }
         public virtual Album album { get; set; }
 
