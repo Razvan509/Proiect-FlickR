@@ -20,20 +20,25 @@
 
     @foreach (Proiect_FlickR.Models.Picture picture in ViewBag.Pictures)
     {
-        <tr>
-            <td>
-                
-                <img src="@Url.Content(picture.Path)" height="42" width="42" />
-            </td>
-            <td>
-               @picture.Name
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = picture.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = picture.Id })
+    <tr>
+        <td>
 
-            </td>
-        </tr>
+            <img src="@Url.Content(picture.Path)" height="42" width="42" />
+        </td>
+        <td>
+            @picture.Name
+        </td>
+         <td>
+           <i class="glyphicon glyphicon-user"></i> <i>articol scris de</i>
+           <strong> @picture.User.UserName </strong>
+
+       </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = picture.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = picture.Id })
+
+        </td>
+    </tr>
     }
 
 </table>

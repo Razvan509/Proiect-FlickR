@@ -31,6 +31,8 @@ namespace Proiect_FlickR.Models
         public DateTime Time { get; set; }
 
         public String Description { get; set; }
+        public string UserId { get; set; }
+        public virtual ApplicationUser User { get; set; }
 
     }
 }
