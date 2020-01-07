@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Create Article";
 }
-    <h2>ViewBag.Title</h2>
+<h2>ViewBag.Title</h2>
 
 @using (Html.BeginForm("Create", "Picture", FormMethod.Post,
                               new { enctype = "multipart/form-data" }))
@@ -11,8 +11,9 @@
     @Html.ValidationSummary(false, "", new { @class = "text-danger" })
 
     @Html.HiddenFor(m => m.Id)
-    @Html.HiddenFor(m=>m.UserId)
- 
+
+    @Html.HiddenFor(m => m.UserId)
+
 
 
 

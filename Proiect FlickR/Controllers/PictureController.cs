@@ -16,7 +16,7 @@ using Microsoft.AspNet.Identity;
 
 namespace Proiect_FlickR.Controllers
 {
-   
+
     public class PictureController : Controller
     {
         
@@ -63,7 +63,7 @@ namespace Proiect_FlickR.Controllers
         }
 
         // GET: Pictures/Create
-        [HttpGet]
+        
         [Authorize(Roles = "Editor,Administrator")]
         public ActionResult Create()
 

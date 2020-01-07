@@ -39,6 +39,10 @@ namespace Proiect_FlickR.Models
             return new ApplicationDbContext();
         }
 
+        public System.Data.Entity.DbSet<Proiect_FlickR.Models.Album> Albums { get; set; }
+
+        //public System.Data.Entity.DbSet<Proiect_FlickR.Models.ApplicationUser> ApplicationUsers { get; set; }
+
         //public System.Data.Entity.DbSet<Proiect_FlickR.Models.ApplicationUser> ApplicationUsers { get; set; }
 
         //public System.Data.Entity.DbSet<Proiect_FlickR.Models.Picture> Pictures { get; set; }
