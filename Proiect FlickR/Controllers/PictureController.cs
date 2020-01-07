@@ -11,11 +11,15 @@ using System.IO;
 using System.Diagnostics;
 using System.Data.Entity.Infrastructure;
 using Proiect_FlickR.ImageHandler;
+using Microsoft.AspNet.Identity;
+
 
 namespace Proiect_FlickR.Controllers
 {
+    [Authorize]
     public class PictureController : Controller
     {
+        
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Pictures
@@ -60,18 +64,23 @@ namespace Proiect_FlickR.Controllers
 
         // GET: Pictures/Create
         [HttpGet]
+        [Authorize(Roles = "Editor,Administrator")]
         public ActionResult Create()
         {
             Picture picture = new Picture();
 
             // preluam lista de categorii din metoda GetAllCategories()
             picture.Categories = GetAllCategories();
+            // Preluam ID-ul utilizatorului curent
+            picture.UserId = User.Identity.GetUserId();
+
 
             return View(picture);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Editor,Administrator")]
         public ActionResult Create(Picture picture, HttpPostedFileBase file)
         {
 
@@ -89,7 +98,7 @@ namespace Proiect_FlickR.Controllers
             file.SaveAs(fileName);
            // picture.Time = DateTime.Now;
 
-            if (picture.Name != null && picture.Path != "Content" + "\\")
+            if (picture.Name != null && picture.UserId!=null && picture.Path != "Content" + "\\")
             {
                 db.Pictures.Add(picture);
                 db.SaveChanges();
@@ -98,27 +107,31 @@ namespace Proiect_FlickR.Controllers
             return RedirectToAction("Index", "Picture");
         }
 
-            // GET: Pictures/Edit/5
-            public ActionResult Edit(int? id)
+        // GET: Pictures/Edit/5
+        [Authorize(Roles = "Editor,Administrator")]
+        public ActionResult Edit(int? id)
         {
             Picture pictures = db.Pictures.Find(id);
             ViewBag.Picture = pictures;
-            if (id == null)
+            pictures.Categories = GetAllCategories();
+            
+            if (pictures.UserId == User.Identity.GetUserId() ||
+                User.IsInRole("Administrator"))
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return View(pictures);
             }
-            Picture picture = db.Pictures.Find(id);
-            if (picture == null)
+            else
             {
-                return HttpNotFound();
+                TempData["message"] = "Nu aveti dreptul sa faceti modificari asupra unui articol care nu va apartine!";
+                return RedirectToAction("Index");
             }
-            return View(picture);
         }
 
         // POST: Pictures/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Editor,Administrator")]
         [ValidateAntiForgeryToken]
         //[Bind(Include = "Id,Name,Path")]
         public ActionResult Edit( int id,Picture requestPicture)
@@ -130,9 +143,8 @@ namespace Proiect_FlickR.Controllers
                 if (ModelState.IsValid)
                 {
                     Picture picture = db.Pictures.Find(id);
-                   // if (pictures.UserId == User.Identity.GetUserId() ||
-                     //   User.IsInRole("Administrator"))
-                    //{
+                    if (picture.UserId == User.Identity.GetUserId() ||   User.IsInRole("Administrator"))
+                    {
                         if (TryUpdateModel(picture))
                         {
                             picture.Name = requestPicture.Name;
@@ -145,12 +157,12 @@ namespace Proiect_FlickR.Controllers
                     ModelState.Clear();
                     return RedirectToAction("Index", "Picture");
                   
-                  //  }
-                    //else
-                    //{
-                      //  TempData["message"] = "Nu aveti dreptul sa faceti modificari asupra unui articol care nu va apartine!";
-                        //return RedirectToAction("Index");
-                    //}
+                   }
+                    else
+                    {
+                       TempData["message"] = "Nu aveti dreptul sa faceti modificari asupra unui articol care nu va apartine!";
+                        return RedirectToAction("Index");
+                    }
 
                 }
                 else
@@ -210,19 +222,19 @@ namespace Proiect_FlickR.Controllers
         public ActionResult Delete(int id)
         {
             Picture picture = db.Pictures.Find(id);
-           /* if (picture.UserId == User.Identity.GetUserId() ||
+            if (picture.UserId == User.Identity.GetUserId() ||
                 User.IsInRole("Administrator"))
-            {*/
+            {
                 db.Pictures.Remove(picture);
                 db.SaveChanges();
                 TempData["message"] = "Articolul a fost sters!";
                 return RedirectToAction("Index");
-            /*}
+            }
             else
             {
                 TempData["message"] = "Nu aveti dreptul sa stergeti un articol care nu va apartine!";
                 return RedirectToAction("Index");
-            }*/
+            }
 
         }
         

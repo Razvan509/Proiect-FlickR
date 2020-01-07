@@ -1,3 +1,4 @@
+﻿<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,8 @@ namespace Proiect_FlickR.Models
         public String Description { get; set; }
 
         public String ThumbPath { get; set; }
+        public string UserId { get; set; }
+        public virtual ApplicationUser User { get; set; }
 
     }
 }
