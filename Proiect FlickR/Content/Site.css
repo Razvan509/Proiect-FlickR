@@ -1,12 +1,23 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css?family=Montserrat|Noto+Serif|Permanent+Marker|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cute+Font&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+  //  background-color: #c5e6ed;
+    background-image: url(bloom-blossom-botanical-cactus-403575.jpg);
+    background-size:1300px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+.td {
+    font-family: 'Ma Shan Zheng', cursive;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -22,3 +33,131 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.field-validation-valid {
+    display: none;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.navbar {
+    background-color: #0a3d62;
+    color: #faeec5;
+    border: none;
+    box-shadow: 0 6px 12px #dadada;
+}
+
+
+    .navbar a {
+        color: #faeec5;
+    }
+
+        .navbar a:hover {
+            color: #0a3d62;
+        }
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Noto Serif', serif; */
+}
+
+.font-logo {
+    font-family: 'Bree Serif', serif;
+}
+
+.footer-position {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    background: #fff;
+    box-shadow: 0 6px 18px #ccc;
+}
+
+.truncate {
+    /* Required declarations: */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    /* Limit the text block to x lines */
+    -webkit-line-clamp: 5;
+}
+
+.row-style {
+    margin-top: 50px;
+}
+
+
+/**
+    Stilizare articol
+*/
+
+.panel-article {
+    box-shadow: 0 2px 6px #ccc;
+    border-radius: 0 !important;
+}
+
+.article-panel-footer {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+    .article-panel-footer.around {
+        justify-content: space-around;
+    }
+
+.article-heading {
+    background-color: #fff !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: 0 2px 4px #f2f2f2;
+}
+
+.article-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3c3c3c;
+}
+
+.article-content-title {
+    font-weight: bold;
+    color: #3c3c3c;
+}
+
+.article-content-wrapper {
+    font-size: 13px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+    .article-content-wrapper * {
+        font-size: 13px !important;
+    }
+
+.article-meta {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+    .article-meta:hover {
+        background-color: #fafafa;
+    }
+
+    .article-meta > * {
+        display: block;
+    }

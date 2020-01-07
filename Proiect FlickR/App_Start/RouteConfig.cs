@@ -16,7 +16,7 @@ namespace Proiect_FlickR
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Picture", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

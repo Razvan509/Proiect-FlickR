@@ -1,21 +1,24 @@
 ﻿
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "I";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<h2>Index</h2>
 
-<br />
 @using (Html.BeginForm("Index", "Picture", FormMethod.Get))
 {
+    <label> Search your pictures here: </label>
     @Html.TextBox("search")
-    <label>Selectati categoria</label>
+    <!--<label>Selectati categoria</label>-->
+    <br>
     @Html.DropDownList("category", new SelectList(ViewBag.Categories, "Value", "Text"),
-        "Selectati categoria", new { @class = "form-control" })
+        "Filter the pictures by category", new { @class = "form-control" })
     <button class="btn btn-sm btn-success" type="submit">Search</button>
 }
+
 <br />
 
-<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
